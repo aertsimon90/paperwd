@@ -90,6 +90,15 @@ def menu():
 				passwds.append(str(h3)+h2+str(h3))
 				passwds.append(h+str(h3)+h2)
 				passwds.append(h2+str(h3)+h)
+	passwds2 = []
+	for h in passwds:
+		if h in passwds2:
+			pass
+		elif h == "":
+			pass
+		else:
+			passwds2.append(h)
+	passwds = passwds2
 	pack = "\n".join(passwds)
 	size = len(pack)/1024/1024
 	print(f"Created {len(passwds)} passwords and all size is {size:.5f} MB")
